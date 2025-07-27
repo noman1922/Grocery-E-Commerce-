@@ -1,0 +1,119 @@
+.cart-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.cart-modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	max-width: 500px;
+	width: 90%;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.cart-modal-content h2 {
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.cart-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+	background: #ff4444;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.checkout-btn {
+	background: #4caf50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.close-btn {
+	background: #666;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.notification {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	border-radius: 4px;
+	color: white;
+	z-index: 1001;
+}
+
+.notification.success {
+	background-color: #4caf50;
+}
+
+.notification.error {
+	background-color: #f44336;
+}
+
+.site-header {
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.site-header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.nav-left,
+.nav-right {
+	display: flex;
+	gap: 1rem;
+}
+
+.site-header a {
+	text-decoration: none;
+	color: #333;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.site-header a:hover {
+	background-color: #f0f0f0;
+}

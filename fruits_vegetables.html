@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fruits & Vegetables - Grocery Shop</title>
+		<style>
+			/* General Reset */
+			body,
+			h1,
+			h2,
+			p,
+			a {
+				margin: 0;
+				padding: 0;
+				font-family: "Roboto", sans-serif;
+			}
+
+			body {
+				background-color: #f3f4f6;
+				color: #333;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			/* Header Styling */
+			header {
+				background: linear-gradient(135deg, #81c784, #66bb6a);
+				color: white;
+				text-align: center;
+				padding: 2rem 0;
+				margin-bottom: 1.5rem;
+			}
+
+			.header-container h1 {
+				font-size: 3rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.header-container p {
+				font-size: 1.2rem;
+			}
+
+			/* Intro Section */
+			.intro-section {
+				text-align: center;
+				padding: 1rem 2rem;
+				background-color: #e8f5e9;
+				margin-bottom: 1.5rem;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Fruits & Vegetables Grid */
+			.items-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5rem;
+				padding: 0 2rem;
+			}
+
+			.item {
+				background-color: white;
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				text-align: center;
+				padding: 1.5rem;
+				box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.item:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+			}
+
+			.item img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px;
+				margin-bottom: 1rem;
+			}
+
+			.item h2 {
+				font-size: 1.5rem;
+				margin-bottom: 0.5rem;
+				color: #388e3c;
+			}
+
+			.item p {
+				font-size: 1rem;
+				color: #555;
+				margin-bottom: 1rem;
+			}
+
+			.item button {
+				background-color: #388e3c;
+				color: white;
+				border: none;
+				padding: 0.7rem 1.5rem;
+				font-size: 1rem;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.item button:hover {
+				background-color: #2e7d32;
+			}
+
+			/* Footer */
+			footer {
+				background-color: #333;
+				color: white;
+				text-align: center;
+				padding: 1.5rem 0;
+				margin-top: 2rem;
+			}
+
+			.footer-container {
+				max-width: 800px;
+				margin: auto;
+				padding: 0 1rem;
+			}
+
+			.footer-container p {
+				margin-bottom: 0.5rem;
+			}
+
+			.footer-nav a {
+				color: #81c784;
+				text-decoration: none;
+				margin: 0 0.5rem;
+				font-size: 1rem;
+				transition: color 0.3s ease;
+			}
+
+			.footer-nav a:hover {
+				color: #66bb6a;
+			}
+		</style>
+		<script src="cartHandler.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<h1>Fruits & Vegetables Category</h1>
+				<p>Fresh and healthy produce for your daily needs</p>
+			</div>
+		</header>
+
+		<main>
+			<section class="intro-section">
+				<p>
+					Welcome to the Fruits & Vegetables section of Madaripur General Store!
+					Discover our fresh and high-quality produce to keep your meals
+					nutritious and delicious. Explore and add to your cart now.
+				</p>
+			</section>
+
+			<section class="items-grid">
+				<!-- Item 1 -->
+				<div class="item">
+					<img src="images/apple1.png" alt="Apple" />
+					<h2>Apple</h2>
+					<p>Juicy and sweet apples perfect for snacking and desserts.</p>
+					<p><strong>Price: 150 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Apple', 150)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 2 -->
+				<div class="item">
+					<img src="images/greenchilli.png" alt="Green Chili" />
+					<h2>Green Chili</h2>
+					<p>Spicy and fresh chilies to add a kick to your dishes.</p>
+					<p><strong>Price: 60 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Green Chili', 60)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 3 -->
+				<div class="item">
+					<img src="images/onion.png" alt="Onion" />
+					<h2>Onion</h2>
+					<p>Fresh and flavorful onions, a kitchen essential.</p>
+					<p><strong>Price: 50 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Onion', 50)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 4 -->
+				<div class="item">
+					<img src="images/tomato.jpg" alt="Tomato" />
+					<h2>Tomato</h2>
+					<p>Ripe and juicy tomatoes for your salads and sauces.</p>
+					<p><strong>Price: 60 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Tomato', 60)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 5 -->
+				<div class="item">
+					<img src="images/garlic.jpg" alt="Garlic" />
+					<h2>Garlic</h2>
+					<p>Fresh garlic cloves to enhance the flavor of any dish.</p>
+					<p><strong>Price: 120 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Garlic', 120)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 6 -->
+				<div class="item">
+					<img src="images/carrot.jpg" alt="Carrot" />
+					<h2>Carrot</h2>
+					<p>Crunchy and sweet carrots, perfect for snacking and cooking.</p>
+					<p><strong>Price: 50 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Carrot', 50)">
+						Add to Cart
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer-container">
+				<p>
+					&copy; 2024 Madaripur General Store | Freshness delivered to your door
+				</p>
+				<nav class="footer-nav">
+					<a href="home.html">Home</a> | <a href="about.html">About Us</a> |
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</footer>
+	</body>
+</html>

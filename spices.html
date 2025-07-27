@@ -1,0 +1,82 @@
+<?php
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Database connection
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "grocery";
+
+$conn = new mysqli($host, $user, $password, $database);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch all spices
+$sql = "SELECT name, price, details, image FROM spices";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spices - Grocery Shop</title>
+    <link rel="stylesheet" href="cart-styles.css" />
+    <script src="cartHandler.js"></script>
+    <style>
+        /* (Use your existing CSS styles here - skipped for brevity) */
+        /* Paste your full CSS from previous message */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Spices Category</h1>
+            <p>Discover the aromatic and flavorful spices of Bangladesh</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <p>
+                Welcome to the spices section of Madaripur General Store! Here, you'll
+                find a variety of authentic Bangladeshi spices to enhance your
+                cooking. Browse through our selection and add your favorites to the
+                cart.
+            </p>
+        </section>
+
+        <section class="spices-grid">
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='spice-item'>";
+                    echo "<img src='" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['name']) . "' />";
+                    echo "<h2>" . htmlspecialchars($row['name']) . "</h2>";
+                    echo "<p>" . htmlspecialchars($row['details']) . "</p>";
+                    echo "<p><strong>Price: " . htmlspecialchars($row['price']) . " BDT</strong></p>";
+                    echo "<button onclick=\"cartHandler.addToCart('" . addslashes($row['name']) . "', " . $row['price'] . ")\">Add to Cart</button>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p style='text-align:center;'>No spices available.</p>";
+            }
+            $conn->close();
+            ?>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Madaripur General Store | Designed with love for Bangladeshi cuisine</p>
+            <nav class="footer-nav">
+                <a href="home.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

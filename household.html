@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Household Items - Grocery Shop</title>
+		<style>
+			/* General Reset */
+			body,
+			h1,
+			h2,
+			p,
+			a {
+				margin: 0;
+				padding: 0;
+				font-family: "Roboto", sans-serif;
+			}
+
+			body {
+				background-color: #f3f4f6;
+				color: #333;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			/* Header Styling */
+			header {
+				background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+				color: white;
+				text-align: center;
+				padding: 2rem 0;
+				margin-bottom: 1.5rem;
+			}
+
+			.header-container h1 {
+				font-size: 3rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.header-container p {
+				font-size: 1.2rem;
+			}
+
+			/* Intro Section */
+			.intro-section {
+				text-align: center;
+				padding: 1rem 2rem;
+				background-color: #e3f2fd;
+				margin-bottom: 1.5rem;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Items Grid */
+			.items-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5rem;
+				padding: 0 2rem;
+			}
+
+			.item {
+				background-color: white;
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				text-align: center;
+				padding: 1.5rem;
+				box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.item:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+			}
+
+			.item img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px;
+				margin-bottom: 1rem;
+			}
+
+			.item h2 {
+				font-size: 1.5rem;
+				margin-bottom: 0.5rem;
+				color: #3f51b5;
+			}
+
+			.item p {
+				font-size: 1rem;
+				color: #555;
+				margin-bottom: 1rem;
+			}
+
+			.item button {
+				background-color: #3949ab;
+				color: white;
+				border: none;
+				padding: 0.7rem 1.5rem;
+				font-size: 1rem;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.item button:hover {
+				background-color: #303f9f;
+			}
+
+			/* Footer */
+			footer {
+				background-color: #333;
+				color: white;
+				text-align: center;
+				padding: 1.5rem 0;
+				margin-top: 2rem;
+			}
+
+			.footer-container {
+				max-width: 800px;
+				margin: auto;
+				padding: 0 1rem;
+			}
+
+			.footer-container p {
+				margin-bottom: 0.5rem;
+			}
+
+			.footer-nav a {
+				color: #3f51b5;
+				text-decoration: none;
+				margin: 0 0.5rem;
+				font-size: 1rem;
+				transition: color 0.3s ease;
+			}
+
+			.footer-nav a:hover {
+				color: #5c6bc0;
+			}
+		</style>
+		<link rel="stylesheet" href="cart-styles.css" />
+		<script src="cartHandler.js"></script>
+		<script src="common-nav.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<h1>Household Items</h1>
+				<p>Everything you need to keep your home clean and organized</p>
+			</div>
+		</header>
+
+		<main>
+			<section class="intro-section">
+				<p>
+					Welcome to the Household Items section of Madaripur General Store!
+					Find a variety of essential products for your daily household needs.
+					Browse and add your favorites to your cart.
+				</p>
+			</section>
+
+			<section class="items-grid">
+				<!-- Item 1 -->
+				<div class="item">
+					<img src="images/toilet_cleaner.png" alt="Cleaning Supplies" />
+					<h2>Cleaning Supplies</h2>
+					<p>High-quality products to keep your home spotless.</p>
+					<p><strong>Price: 150 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Cleaning Supplies', 150)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 2 -->
+				<div class="item">
+					<img src="images/Vim.png" alt="Dishwashers" />
+					<h2>Dishwashers</h2>
+					<p>Effective and safe solutions for sparkling dishes.</p>
+					<p><strong>Price: 15 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Dishwashers', 15)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 3 -->
+				<div class="item">
+					<img src="images/detergent.png" alt="Laundry Detergent" />
+					<h2>Laundry Detergent</h2>
+					<p>Gentle and powerful detergent for your clothes.</p>
+					<p><strong>Price: 120 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Laundry Detergent', 120)">
+						Add to Cart
+					</button>
+				</div>
+
+				<!-- Item 4 -->
+				<div class="item">
+					<img src="images/air.jpg" alt="Air Fresheners" />
+					<h2>Air Fresheners</h2>
+					<p>Fresh and pleasant scents for your home.</p>
+					<p><strong>Price: 280 BDT</strong></p>
+					<button onclick="cartHandler.addToCart('Air Fresheners', 280)">
+						Add to Cart
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer-container">
+				<p>
+					&copy; 2024 Madaripur General Store | Making household tasks easier
+				</p>
+				<nav class="footer-nav">
+					<a href="home.html">Home</a> | <a href="about.html">About Us</a> |
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</footer>
+	</body>
+</html>

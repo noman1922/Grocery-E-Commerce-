@@ -1,0 +1,44 @@
+{
+    "categories": [
+      {
+        "name": "Fruits & Vegetables",
+        "image": "images/fruits-vegetables.jpg",
+        "products": [
+          {
+            "id": 1,
+            "name": "Fresh Apples",
+            "price": 2.99,
+            "image": "images/apple.jpg",
+            "description": "Crisp and juicy apples, perfect for snacking or baking."
+          },
+          {
+            "id": 2,
+            "name": "Organic Carrots",
+            "price": 1.99,
+            "image": "images/carrots.jpg",
+            "description": "Sweet and crunchy organic carrots, great for salads or cooking."
+          }
+        ]
+      },
+      {
+        "name": "Snacks & Drinks",
+        "image": "images/snacks-drinks.jpg",
+        "products": [
+          {
+            "id": 3,
+            "name": "Potato Chips",
+            "price": 3.49,
+            "image": "images/potato-chips.jpg",
+            "description": "Crispy and flavorful potato chips, perfect for snacking."
+          },
+          {
+            "id": 4,
+            "name": "Cola Drink",
+            "price": 1.99,
+            "image": "images/cola.jpg",
+            "description": "Refreshing cola drink, great for quenching your thirst."
+          }
+        ]
+      }
+    ]
+  }

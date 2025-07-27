@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Madaripur Store - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #28a745;
+      --dark-color: #1c1c1c;
+      --light-gray: #f0f0f0;
+      --gray: #888;
+      --border: #ccc;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light-gray);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: white;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      color: var(--primary-color);
+      font-size: 2rem;
+    }
+
+    .container {
+      width: 450px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--dark-color);
+    }
+
+    input {
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+
+    .forgot-password a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .forgot-password a:hover {
+      color: var(--primary-color);
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      background: var(--dark-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Madaripur General Store</h1>
+  </nav>
+
+  <div class="container">
+    <!-- Login Form -->
+    <form>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required />
+      </div>
+      <div class="forgot-password">
+        
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2023 Madaripur General Store. All rights reserved.
+  </footer>
+</body>
+</html>
